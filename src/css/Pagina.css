@@ -1,0 +1,148 @@
+/* src/components/Pagina.css */
+.flipbook-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f7faf9;
+    position: relative;
+    overflow: hidden;
+}
+
+.flipbook-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.card1 {
+    background-color: #434446;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.demoPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: #5b5f66;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.nav-button:hover {
+    background-color: #2d3748;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:focus,
+.nav-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.prev-button {
+    margin-right: 20px;
+}
+
+.next-button {
+    margin-left: 20px;
+}
+
+.home-button {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 0.9em;
+    padding: 0.6em 1.2em;
+    z-index: 3;
+    background-color: #5b5f66;
+    transition: transform 0.2s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.05);
+    background-color: #2d3748;
+}
+
+.home-button:focus,
+.home-button:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .flipbook-container {
+        padding: 60px 0;
+    }
+
+    .flipbook-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card1 {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px 0;
+    }
+
+    .nav-button {
+        width: 100px;
+        height: 40px;
+        font-size: 0.9em;
+        padding: 0.6em 1.2em;
+    }
+
+    .prev-button,
+    .next-button {
+        margin: 10px 0;
+    }
+
+    .home-button {
+        width: 130px;
+        height: 35px;
+        font-size: 0.8em;
+        top: 10px;
+        right: 10px;
+    }
+}
